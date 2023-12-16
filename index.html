@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trạm nhạc Lofi</title>
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- link bootstrap -->
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="./main.css">
+</head>
+  <body>
+    <div class="container-fluid maincontent">
+        
+        <div class="row content">
+            <div class="col-md-6 col-lg-5 leftcol">
+                <div class="nav-card">
+                    <div>
+                        <i class="fa fa-music" style="font-size:35px;color:white;"></i>
+                        <span style=" font-weight: bolder;">TramNhacLofi</span>
+                    </div>
+                    <div style="margin-top: 25px;">
+                        <a href="#">
+                            <i class="fa fa-home" style="font-size: 35px; color: rgb(189, 189, 189);"></i>
+                            <span style="margin-left: 20px;font-weight: bolder; color: rgb(189, 189, 189);">Trang chủ</span>
+                        </a>
+                    </div>
+                    <div style="margin-top: 25px;">
+                        <a href="#">
+                            <i class="fa fa-search" style="font-size: 30px; color: rgb(189, 189, 189);"></i>
+                            <span style="margin-left: 20px;font-weight: bolder; color: rgb(189, 189, 189);">Thể loại</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="store">
+                    <div>
+                        <i class="fa fa-heart" style="font-size: 30px; color: rgb(189, 189, 189);"></i>
+                        <span style="margin-left: 20px;font-weight: bolder; color: rgb(189, 189, 189);">Dach sách nhạc</span>
+                    </div>
+
+                    <!-- danh sách nhạc -->
+                    <div class="music-list text-center">
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img1.jfif" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                W/n-id 072019 | 3107 ft 267 
+                            </div>
+                            <div class="col-3">
+                                <button data-song="Id 072019 | 3107 ft 267" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img8.jfif" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                Fire Force - Opening | Inferno
+                            </div>
+                            <div class="col-3">
+                                <button data-song="Fire Force - Opening | Inferno" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img3.jpg" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                W/n - 3107 3 ft. 267
+                            </div>
+                            <div class="col-3">
+                                <button data-song="W/n - 3107 3 ft. 267" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img4.jfif" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                WREN EVANS - TỪNG QUEN
+                            </div>
+                            <div class="col-3">
+                                <button data-song="WREN EVANS - TỪNG QUEN" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img5.jpg" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                Dragon Ball GT (AMV) - Dan Dan Kokoro Hikareteku
+                            </div>
+                            <div class="col-3">
+                                <button data-song="Dragon Ball GT (AMV) - Dan Dan Kokoro Hikareteku" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img7.jfif" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                Tokyo Ghoul - Opening 1 | Unravel
+                            </div>
+                            <div class="col-3">
+                                <button data-song="Tokyo Ghoul - Opening 1 | Unravel" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img2.jfif" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                W/n - 3107 4 x Erik ft Nâu 
+                            </div>
+                            <div class="col-3">
+                                <button data-song="W/n - 3107 4 x Erik ft Nâu" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/img9.jpg" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                Nom - Beneath The Rain
+                            </div>
+                            <div class="col-3">
+                                <button data-song="Nom - Beneath The Rain" class="playbutton" onclick="playMusic(this);">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột phải -->
+            <div class="col-md-6 col-lg-7 rightcol">
+
+            </div>
+        </div>
+    </div>
+    
+  </body>
+  <!-- link bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- link bootstrap -->
+  <script src="./main.js"></script>
+  </html>
