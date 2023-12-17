@@ -30,7 +30,7 @@ function playMusic(button) {
     var songName = button.getAttribute("data-song");
     var playIcon = button.querySelector("i");
     var backgroundCurrentSong = button.parentNode.parentNode;
-
+    var circle = document.getElementById('animationCircle');
     if (isPlaying) {
         if (currentSong != songName) {
             audio.pause();
@@ -38,12 +38,15 @@ function playMusic(button) {
             bgrCurSong.classList.remove("currentSong");
             id2.classList.add("fa-play");
             console.log('đang dừng bài'+ currentSong);
+            circle.classList.remove('cdCricle');
+            console.log('da xoa circle');
             isPlaying = false;
         } else {
             audio.pause();
             playIcon.classList.remove("fa-pause");
             playIcon.classList.add("fa-play");
             bgrCurSong.classList.remove("currentSong");
+            circle.style.animationPlayState = 'paused';
             console.log('đang dừng bài'+ currentSong);
             isPlaying = false;
             return;
@@ -59,7 +62,7 @@ function playMusic(button) {
                 isPlaying = true;
                 playIcon.classList.remove("fa-play");
                 playIcon.classList.add("fa-pause");
-                
+                circle.style.animationPlayState = 'running';
                 backgroundCurrentSong.classList.add("currentSong");
                 console.log('đang phát bài'+ songName);
                 currentSong = songName;
@@ -68,7 +71,49 @@ function playMusic(button) {
             break; 
         }
     }
-
+    rightCol(audio);
     id2 = playIcon;
     bgrCurSong = backgroundCurrentSong;
+}
+function rightCol(audio) {
+    console.log(audio); 
+    var rightPlay = document.getElementById('rightPlay');
+    var animation = document.getElementById('animationCircle');
+    animation.classList.add("cdCircle");
+    rightPlay.classList.add("fa-pause");
+    rightPlay.onclick = function() {
+        console.log('da click');
+        if (!audio.paused) {
+            audio.pause();
+            rightPlay.classList.add("fa-play");
+            rightPlay.classList.remove("fa-pause");
+            animation.style.animationPlayState = 'paused';
+            console.log('da ngung nhac roi');
+        }
+        else {
+            audio.play();    
+            rightPlay.classList.remove("fa-play");
+            rightPlay.classList.add("fa-pause");
+            console.log('da phat nhac roi');
+            animation.style.animationPlayState = 'running';
+        }
+    }
+
+
+    // xử lí thanh tiến trình nhạc 
+    var progressBar = document.getElementById('thanh_trangthai');
+    var tuanhac = document.getElementById('tuanhac');
+    audio.addEventListener('timeupdate', function (){
+        // tiến trình hiện tại
+        var progressPercent = (audio.currentTime * 100 / audio.duration);
+        progressBar.style.width = progressPercent + '%';
+    })
+    // lắng nghe sự kiện tua nhạc
+    tuanhac.addEventListener('click', function (e){
+        // đặt chiều dài mới
+        var clickX = e.offsetX * 100 / tuanhac.offsetWidth;
+        console.log(clickX);
+        var newProgress = (clickX / 100) * audio.duration;
+        audio.currentTime = newProgress;
+    })
 }

@@ -18,7 +18,7 @@ a {
 }
 .nav-card {
     height: 30%;
-    background-color: rgb(16, 16, 16);
+    background-color: rgb(26, 26, 26);
     border-radius: 10px;
     padding: 20px;
 }
@@ -28,7 +28,7 @@ a {
 /*** cột trái dưới ***/
 .store {
     height: 70%;
-    background-color: rgb(16,16, 16);
+    background-color: rgb(26,26, 26);
     margin-top: 10px;
     border-radius: 10px;
     padding: 20px;
@@ -105,3 +105,145 @@ a {
 } 
 
 /***               ***/
+
+/**** cột phải ****/
+.timNhac {
+    height: 60px;
+    background-color: rgb(26,26, 26);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightcol {
+    padding-left: 0px;
+}
+.searchSong {
+    width: 65%;
+}
+.inputSearch {
+    background-color: rgb(26,26, 26);
+    border: none;
+    border-radius: 10px;
+    border: solid 0.5px rgb(189, 189, 189);
+    padding-left: 10px;
+    color: rgb(189, 189, 189);
+}
+.currentMusic {
+    background-color: rgb(26, 26, 26);
+    height: calc(100% - 70px);
+    margin-top: 10px;
+    border-radius: 10px;
+    color: rgb(189, 189, 189);
+}
+.titleSong {
+    font-size: x-large;
+    font-weight: bold;
+}
+.nameSong {
+    padding-top: 15px;
+}
+.imgSong {
+    margin-top: 10px;
+    height: 400px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.inImgSong {
+    background-image: url(./image/img7.jfif);
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    border-radius: 10px;
+  
+}
+.lopphu {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+.circleImg {
+    height: 350px;
+    width: 350px;
+    border-radius: 100%;
+    background-image: url(./image/img7.jfif);
+    background-position: right;
+    background-size: 200%;
+    box-shadow: 0px 0px 25px rgb(277, 78, 185);
+    border: solid rgb(221, 126, 255);
+    
+}
+.play-next-back {
+    width: 40%;
+    height: 80px;
+    background-color: #222222;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.trangthai1 {
+    margin: 10px;
+    height: 40px;
+    background-color: #222222;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    padding-top: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.trangthai2 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.thanh_trangthai {
+    background-color: rgb(227, 78, 185);
+    box-shadow: 0px 0px 50px rgb(227, 148, 255);
+    height: 8px;
+    border-radius: 10px;
+    width: 0%;
+    position: relative;
+    
+}
+.thanh_trangthai:after {
+    content: '';
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    right: -5px;
+    border-radius: 100%;
+    background-color: rgb(227, 148, 255);
+    box-shadow: 0px 0px 20px rgb(232, 173, 254);
+    transform: translateY(-2px);
+    transition: all 1s linear;
+}
+.bgr_thanh_trangthai {
+    height: 8px;
+    background-color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@keyframes cdCircle {
+    from {
+        transform:rotateX(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.cdCircle {
+    animation-name: cdCircle;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
