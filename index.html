@@ -16,8 +16,8 @@
     <div class="container-fluid maincontent">
         
         <div class="row content">
-            <div class="col-md-6 col-lg-5 leftcol">
-                <div class="nav-card">
+            <div class="col-md-6 col-lg-5 leftcol order-md-1 order-2">
+                <div class="nav-card hide-on-mobile">
                     <div>
                         <i class="fa fa-music" style="font-size:35px;color:white;"></i>
                         <span style=" font-weight: bolder;">TramNhacLofi</span>
@@ -38,7 +38,7 @@
                 <div class="store">
                     <div>
                         <i class="fa fa-heart" style="font-size: 30px; color: rgb(189, 189, 189);"></i>
-                        <span style="margin-left: 20px;font-weight: bolder; color: rgb(189, 189, 189);">Dach sách nhạc</span>
+                        <span style="margin-left: 10px;font-weight: bolder; color: rgb(189, 189, 189);">Dach sách nhạc</span>
                     </div>
 
                     <!-- danh sách nhạc -->
@@ -112,7 +112,7 @@
                                 Dragon Ball GT (AMV) - Dan Dan Kokoro Hikareteku
                             </div>
                             <div class="col-3">
-                                <button data-song="Dragon Ball GT (AMV) - Dan Dan Kokoro Hikareteku" class="playbutton" onclick="playMusic(this);">
+                                <button data-song="Dan Dan Kokoro Hikareteku" class="playbutton" onclick="playMusic(this);">
                                     <i class="fa fa-play"></i>
                                 </button>
                             </div>
@@ -168,10 +168,10 @@
             </div>
 
             <!-- Cột phải -->
-            <div class="col-md-6 col-lg-7 rightcol">
+            <div class="col-md-6 col-lg-7 rightcol order-md-2 order-1">
                 <div class="timNhac">
                     <div class="searchSong text-center">
-                        <div style="display: flex;">
+                        <div style="display: flex;" class="search">
                             <input class="me-2 inputSearch" type="search" placeholder="Tên bài hát..." aria-label="Search" style="height: 40px;">
                             <button class="playbutton" style="width: 80px;">
                                 <i class="fa fa-search" style="font-size: 25px;"></i>
@@ -181,14 +181,14 @@
                 </div>
 
                 <div class="currentMusic text-center">
-                    <div class="nameSong titleSong">
+                    <div class="nameSong titleSong" id="tenbaihat">
                         Id 072019 | 3107 ft 267
                     </div>
-                    <div class="tacGia titleSong">
+                    <div class="tacGia titleSong" id="tacgia">
                         W/n
                     </div>
                     <div class="imgSong">
-                        <div class="inImgSong">
+                        <div class="inImgSong" id="anhnen">
                             <div class="lopphu">
                                 <div class="circleImg" id="animationCircle">
                                     
@@ -210,7 +210,7 @@
                                     <i class="fa fa-step-backward" style="font-size: 30px; cursor: pointer;"></i>
                                 </div>
                                 <div class="col-4">
-                                    <i id="rightPlay" class="fa fa-pause" style="font-size: 30px; cursor: pointer;"></i>
+                                    <i id="rightPlay" class="fa fa-play" style="font-size: 30px; cursor: pointer;"></i>
                                 </div>
                                 <div class="col-4">
                                     <i class="fa fa-step-forward" style="font-size: 30px; cursor: pointer;"></i>
@@ -219,6 +219,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="hide-on-desktop order-3">
+                <div class="bottom-nav"></div>
             </div>
         </div>
     </div>
