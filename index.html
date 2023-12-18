@@ -46,6 +46,20 @@
 
                         <div class="song">
                             <div class="col-3">
+                                <img src="./image/goku2.png" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                Rồng thiêng | Dragonball Kai
+                            </div>
+                            <div class="col-3">
+                                <button data-song="Rồng thiêng" class="playbutton" onclick="playMusic(this);">
+                                    Nghe
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="song">
+                            <div class="col-3">
                                 <img src="./image/img1.jfif" height="65px" width="100%" class="img-song">
                             </div>
                             <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
@@ -53,7 +67,7 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="Id 072019 | 3107 ft 267" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -68,7 +82,7 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="Fire Force - Opening | Inferno" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -83,7 +97,7 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="W/n - 3107 3 ft. 267" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -98,7 +112,7 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="WREN EVANS - TỪNG QUEN" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -113,7 +127,7 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="Dan Dan Kokoro Hikareteku" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -128,7 +142,7 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="Tokyo Ghoul - Opening 1 | Unravel" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -143,7 +157,7 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="W/n - 3107 4 x Erik ft Nâu" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -158,7 +172,21 @@
                             </div>
                             <div class="col-3">
                                 <button data-song="Nom - Beneath The Rain" class="playbutton" onclick="playMusic(this);">
-                                    <i class="fa fa-play"></i>
+                                    Nghe
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="song">
+                            <div class="col-3">
+                                <img src="./image/goku.jfif" height="65px" width="100%" class="img-song">
+                            </div>
+                            <div class="col-6" style="text-align: left; padding-left: 10px;padding-right: 10px; border-right: solid rgb(189, 189, 189) 0.5px;">
+                                Chozetsu Dynamic!
+                            </div>
+                            <div class="col-3">
+                                <button data-song="Chozetsu Dynamic!" class="playbutton" onclick="playMusic(this);">
+                                    Nghe
                                 </button>
                             </div>
                         </div>
@@ -196,7 +224,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="statusSong">
+                    <div class="statusSong" id="statusSong">
                         <div class="trangthai1">
                             <div class="bgr_thanh_trangthai" id="tuanhac">
                                 <div class="thanh_trangthai" id="thanh_trangthai">
@@ -207,13 +235,13 @@
                         <div class="trangthai2">
                             <div class="play-next-back">
                                 <div class="col-4">
-                                    <i class="fa fa-step-backward" style="font-size: 30px; cursor: pointer;"></i>
+                                    <i class="fa fa-step-backward" id="back" style="font-size: 30px; cursor: pointer;"></i>
                                 </div>
                                 <div class="col-4">
                                     <i id="rightPlay" class="fa fa-play" style="font-size: 30px; cursor: pointer;"></i>
                                 </div>
                                 <div class="col-4">
-                                    <i class="fa fa-step-forward" style="font-size: 30px; cursor: pointer;"></i>
+                                    <i class="fa fa-step-forward" id="next" style="font-size: 30px; cursor: pointer;"></i>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +249,26 @@
                 </div>
             </div>
             <div class="hide-on-desktop order-3">
-                <div class="bottom-nav"></div>
+                <div class="bottom-nav text-center">
+                   <div class="col-4" style="text-align: right;">
+                        <a href="#">
+                            <i class="fa fa-clone" style="font-size: 30px; color: rgb(189, 189, 189);"></i>
+                        </a>
+                   </div>
+                   <div class="col-4">
+                        
+                            <a href="#">
+                                <i class="fa fa-home" style="font-size: 35px; color: rgb(189, 189, 189);"></i> 
+                            </a>
+                        
+                   </div>
+                  
+                   <div class="col-4" style="text-align: left;">
+                        <a href="#">
+                            <i class="fa fa-user-circle" style="font-size: 35px; color: rgb(189, 189, 189);"></i> 
+                        </a>
+                   </div>
+                </div>
             </div>
         </div>
     </div>
